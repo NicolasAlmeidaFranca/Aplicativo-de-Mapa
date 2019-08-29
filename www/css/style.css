@@ -1,2 +1,21 @@
-/**/
+body {
+  background-color: black;
+  text-align: center;
+}
 
+.container {
+  border: solid white;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 100px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: "Courier New", monospace;
+  color: black;
+}
+
+.btn {
+  border-radius: 20px;
+}
