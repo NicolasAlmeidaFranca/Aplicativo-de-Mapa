@@ -1,24 +1,31 @@
- $(document).on("click","#mapa",function(){
-    var onSuccess = function(position) {
-        alert('Latitude: '          + position.coords.latitude          + '\n' +
-              'Longitude: '         + position.coords.longitude         + '\n' +
-              'Altitude: '          + position.coords.altitude          + '\n' +
-              'Accuracy: '          + position.coords.accuracy          + '\n' +
-              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-              'Heading: '           + position.coords.heading           + '\n' +
-              'Speed: '             + position.coords.speed             + '\n' +
-              'Timestamp: '         + position.timestamp                + '\n');
+$(docuent).ready(function(){
+  var internet;
+  var networkState = navigator.connection.type;
+  $("#map").show();
+
+  document.addEventListener("offline",onOffline,false);
+  function onOffline(){
+    internet = true;
+  }
+
+$(document).on("click","#abrirMapa",function(){
+  if(internet == false){
+    navigator.vibrate([6050]);
+    navigator.notification.beep(3);
+    alert("Nenhuma Rede Detectada!");
+  }
+  else if (internet != false){
+    $("#map").show();
+    navigator.notification.beep(1);
+    var onSucess = function(position){
+      L.mapquest.key = 'ZWOPZh9GQroj1mpc8EGwcRGE654RB0P2';
+      L.mapquest.map('map',{
+        center:[position.coords.latitude,position.coords.longitude],
+        layers:L.mapquest.titleLayer('map'),
+        zoom:12
+      });
     };
-
-    // onError Callback receives a PositionError object
-    //
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
-
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
-  
+    navigator.geolocation.getCurrentPosition(onSucess);
+  };
 });
-
- 
+});
