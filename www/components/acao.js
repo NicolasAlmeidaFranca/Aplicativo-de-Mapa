@@ -1,5 +1,5 @@
 
-$(docuent).ready(function(){
+$(document).ready(function(){
   var internet;
   var networkState = navigator.connection.type;
   $("#map").show();
