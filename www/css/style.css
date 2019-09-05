@@ -122,10 +122,21 @@ div.col-xs-12{
 }
 
 img {
-  right: 3.8vh;
+  right: 3.3vh;
   position: fixed;
   width: 88%;
   height: 63vh;
-  top: 29.7vh;
+  top: 26.6vh;
   border-radius: 4vh;
 }
+
+#map {
+  right: 3.3vh;
+  position: fixed;
+  width: 88%;
+  height: 63vh;
+  top: 26.6vh;
+  border-radius: 4vh;
+}
+
+

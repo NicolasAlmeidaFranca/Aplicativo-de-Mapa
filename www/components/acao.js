@@ -1,8 +1,9 @@
 
-$(docuent).ready(function(){
+$(document).ready(function(){
   var internet;
   var networkState = navigator.connection.type;
   $("#map").show();
+  $("#voltar").hide();
 
   document.addEventListener("offline",onOffline,false);
   function onOffline(){
@@ -17,6 +18,7 @@ $(document).on("click","#abrirMapa",function(){
   }
   else if (internet != false){
     $("#map").show();
+    $("#voltar").hide();
     navigator.notification.beep(1);
     var onSucess = function(position){
       L.mapquest.key = 'ZWOPZh9GQroj1mpc8EGwcRGE654RB0P2';
@@ -28,5 +30,7 @@ $(document).on("click","#abrirMapa",function(){
     };
     navigator.geolocation.getCurrentPosition(onSucess);
   };
+   $(document).on("click", "#voltar", function(){document.location.reload(true);
+});
 });
 });
