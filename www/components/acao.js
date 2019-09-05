@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(docuent).ready(function(){
   var internet;
   var networkState = navigator.connection.type;
@@ -29,3 +30,5 @@ $(document).on("click","#abrirMapa",function(){
   };
 });
 });
+=======
+>>>>>>> f4d1074ecca7754287e400a2a713cf5941815a74
