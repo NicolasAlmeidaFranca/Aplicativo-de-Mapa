@@ -3,42 +3,129 @@ body {
   text-align: center;
 }
 
-.container {
-  padding: 20px;
-  margin: 10px;
-  border: 2px solid transparent;
-  border-radius: 10%;
-  background-color: white;
-  margin-top: 200px;
-}
-
-h1 {
+button {
+  margin-top: 30px;
   text-transform: uppercase;
   font-family: "Courier New", monospace;
-  color: black;
-  text-shadow: 2px 2px 3px black;
-}
-
-.btn {
-  text-transform: lowercase;
-  font-family: "Courier New", monospace;
   text-align: center;
-  background-color: black;
-  font-size: 16px;
+  font-size: 20px;
   width: 160px;
   height: 100px;
   border: 2px solid transparent;
   padding: 25px;
-  margin: 10px;
   border-radius: 10%;
   transition: .2s;
-  box-shadow: 0 4px rgba(0,0,0,0.2);
-  color: white;
+  box-shadow: 0 5px rgba(0,0,0,0.2);
+  color: black;
+  background-color: #b3bdd3;
+  text-shadow: 3px 3px 4px black;
    }
-  .btn:hover {
-  background-color: grey;
+  button:hover {
+  color: whitesmoke;
+  background-color: black;
+  text-shadow: 3px 3px 4px whitesmoke;
    }
-  .btn:active {
+  button:active {
     transform: scale(0.9);
+    box-shadow: none;
     }
 
+button {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+div.row{
+  position: absolute;
+  background-color: #b3bdd3;
+  width: 100%;
+  height: 100%;
+}
+
+div.col-xs-12{
+  width: 93%;
+  height: 66%;
+  left: 13px;
+  top: 160px;
+  position: fixed;
+  background-color: whitesmoke;
+  border-radius: 10%;
+  border: #b3bdd3 10px solid;
+}
+
+img {
+  right: 3.8vh;
+  position: fixed;
+  width: 88%;
+  height: 63vh;
+  top: 29.7vh;
+  border-radius: 4vh;
+}
